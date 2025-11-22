@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Font Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-mobile">
+                <div class="nav-icon-wrap" id="main-menu-toggle">
+                    <div class="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="header-mobile-title" id="header-mobile-title">Webfont Optimizer</div>
+            </div>
+            <div class="header-top">
+                <ul class="main-menu clearfix" id="main-menu">
+                    <li class="main-menu-item main-menu-item-1 is-active">
+                        <a class="main-menu-link" href="/ttc-unpack">TTC/UNPCK</a>
+                    </li>
+                    <li class="main-menu-item main-menu-item-3">
+                        <a class="main-menu-link" href="/formats">Font formast</a>
+                    </li>
+                    <li class="main-menu-item main-menu-item-4" > <a class="main-menu-link" href="/examples">Examples</a></li>
+                    <li class="main-menu-item main-menu-item-5">
+                        <a class="main-menu-link js-feedback-form" href="#">Feedback</a>
+                    </li>
+                    <li class="main-menu-item main-menu-item-6"><a class="main-menu-link is-donate" href="/donate">Donate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <a class="logo" href="L">Transfonter</a>
+                    <h1 class="subheader">Modern and simple css @font-face Optimizer</h1>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+         <div class="buttons buttons-with-hint">
+            <div class="container">
+                <div class="buttons-inner">
+                    <span class="btn btn-lg btn-primary btn-responsive fileinput-button">
+                        <span class="glyphicon glyphicon-cloud-upload">
+                        </span>
+                        "Add fonts"
+                        <input id="add-font" type="file" name="files[]" accept=".ttf, .otf, .woff, .woff2, .svg" multiple>
+                    </span>
+                    <button class="btn btn-lg btn-success btn-responsive disable" id="btn-convert" disabled>
+                        <span class="loading-state">
+                            <span class="glyphicon glyphicon-ok">
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                <div class="buttons-hint">
+                    "TTF, OTF, WOFF, WOFF2 or svg, 15 MB per file. multipload and drag-and-drop are supported."
+                </div>
+            </div>
+         </div>
+         <!-- buttons -->
+          <div class="descripting containder" id="description">
+            <p>
+                "The"
+                <strong>@font-face</strong>
+                "Css rule allows web developers to specif online fonts to display text on their web pages. By allowing authors to provide their own fonts,"
+                <strong>@font-face</strong>
+                " eliminates the need to depend on the limited number of fonts user have installed on their computers."
+            </p>
+            <p>
+                <b>Usage:</b>
+                "click the"
+                <b>Add font(s)</b>
+                " button, select the TTF, OTF, WOFF, WOFF2 or SVG fonts on your computer and click"
+                <b>Conver</b>
+                ". Download zip archive with convert fonts, css styles and demo page. That's all!"
+            </p>
+          </div>
+          <div class="content container">
+            <div class="result" id="result" style="display: none;">
+                <div class="result-inner">
+                    <div class="column column-download">
+                        <a href="#" id="btn-download" download>Download</a>
+                        <span class="archive-size text-muted">
+                            "("
+                            <span id="archive-size"></span>
+                                ")"
+                        </span>
+                        <br>
+                        " Download your @font-face kit"
+                    </div>
+                    <div class="divider"> Or </div>
+                    <div class="column column-preview">
+                        <a href="#" id="btn-preview">Preview</a>
+                        <br>
+                        "View live demo page"
+                    </div>
+                </div>
+            </div>
+            <!-- result -->
+             <div class="fonts" id="fonts"></div>
+             <div class="settings" id="settings">
+                <form action id="setting-form">
+                    <div class="setting-row clearfix">
+                        <div class="setting-row-half setting-row-half-margin">
+                            <div class="setting-row-control">
+                                <div class="bootstrap-switch-on bootstrap-switch-small bootsrap-switch-id-option-family bootstrap-switch bootsrap-switch-wrapper bootsrap-switch-animate" style="width: 76px;">
+                                    <div class="bootsrap-switch-container" style="width: 111px; margin-left: 0px;">
+                                        <span class="bootsrap-switch-handle-on bootstrap-switch-success" style="width: 37px;">
+                                           "on" 
+                                        </span>
+                                        <span class="bootsrap-switch-label" style="width: 37px;">
+                                            "&nbsp;"
+                                        </span>
+                                        <span class="bootsrap-switch-handle-off bootstrap-switch-default" style="width: 37px;">
+                                            "off"
+                                        </span>
+                                        <input id="option-family" class="js-switch" type="checkbox" name="family" value="1" checked>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setting-row-label">
+                                <label for="option-family" class="setting-name">Family support</label>
+                                <span class="seting-help tooltiped" title data-placement="right" data-original-title="Merge all font-weights and styles under the same font name"></span>
+                            </div>
+                        </div>
+                        <div class="setting-row-half">
+                            <div class="setting-row-control">
+                                <div class="bootstrap-switch-off bootstrap-switch-small bootstrap-switch-id-option-vertical-metrics bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate" style="width: 76px;">
+                                    <div class="bootsrap-switch-container" style="width: 111px; margin-left: -37px;">
+                                        <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 37px;">
+                                            "off"
+                                        </span>
+                                        <input id="option-vertical-metrics" class="js-switch" type="checkbox" name="fireVerticalMetrics" value="1">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="setting-row-level">
+                            <label for="option-vertical-metrics" class="settings-name">Fix vertical metrics</label>
+                            <span class="setting-help tooltiped" title data-placement="right" data-original-title="Auto-adjust vertical metrics"></span>
+                        </div>
+                    </div>
+                    <div class="setting-row clearfix">
+                        <div class="setting-row-half setting-row-half-margin">
+                            <div class="settings-row-control">
+                                <div class="bootstrap-switch-off bootstrap-switch-small bootstrap-switch-id-option-local bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate" style="width: 76px;">
+                                    <div class="bootstrap-switch-container" style="width: 111px; margin-left: -37px;">
+                                        <span class="bootstrap-switch-handle-on bootstrap-switch-success" style="width: 37px;">
+                                            "on"
+                                        </span>
+                                        <span class="bootstrap-switch-label" style="width: 37px;">
+                                            "&nbsp"
+                                        </span>
+                                        <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 37px;">
+                                            "off"
+                                        </span>
+                                        <input id="option-local" class="js-switch" type="checkbox" name="local" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setting-row-label">
+                                <label for="option-local" class="setting-name">Add local rule</label>
+                                <span class="setting-help tooltiped" title data-placement="right" data-original-title="Tell browser to check for
+                                                    typeface on a visitor's computer
+                                before attempting to load it"></span>
+                            </div>
+                        </div>
+                        <div class="setting-row-half">
+                            <div class="setting-row-control">
+                                <div class="bootstrap-switch-off bootstrap-switch-small bootstrap-switch-id-option-base64 bootstrap-switch bootstrap-switch-wrapper bootstrap-switch-animate" style="width: 76px;">
+                                    <div class="bootstrap-switch-container" style="width: 111px; margin-left: -37px;">
+                                        <span class="bootsrap-switch-handle-on bootstrap-switch-success" style="width: 37px;">
+                                            "On"
+                                        </span>
+                                        <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 37px;">
+                                            "off"
+                                        </span>
+                                        <input id="option-base64" class="js-width" type="checkbox" name="base64" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="setting-row-label">
+                                <label for="option-base64" class="settings-name">Base64 encode</label>
+                                <span class="setting-help tooltiped" title data-placement="right" data-original-title="Embed font in CSS"></span>
+                            </div>
+                        </div>
+                        ::after
+                    </div>
+
+                    <!--ab yaha per ham new div se start karege  -->
+                </form>
+             </div>
+          </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
