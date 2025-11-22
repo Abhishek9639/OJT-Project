@@ -185,15 +185,300 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="setting-row-label">
+                            <div class="settings-row-label">
                                 <label for="option-base64" class="settings-name">Base64 encode</label>
-                                <span class="setting-help tooltiped" title data-placement="right" data-original-title="Embed font in CSS"></span>
+                                <span class="settings-help tooltiped" title data-placement="right" data-original-title="Embed font in CSS"></span>
                             </div>
                         </div>
                         ::after
                     </div>
+                    <div class="settings-row clearfix">
+                        ::before
+                        <div class="settings-row-half">
+                            <div class="settings-row-label">
+                                <label class="setttings-name">Formats</label>
+                                <a class="settings-help" href="/fromat#browser-support" target="_blank"
+                            </div>
+                        </div>
+                        <div class="setting-row-half">
+                            <div class="settings-colum">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="formats[]" value="ttf">
+                                        " TTF"
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="formats[]" value="eot">
+                                        " EOT"
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-colum">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="formats[]" value="woff" checked>
+                                        "WOFF"
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="formats[]" value="woff2" checked>
+                                        " WOFF2"
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-colum">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="formats[]" value="svg">
+                                        " SVG"
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        ::after
+                    </div>
+                    <div class="settings-row clearfix">
+                        <div class="settings-row-half">
+                            <div class="settings-row-label">
+                                <label for="option-hinting" class="settings-name">Hinting</label>
+                            </div>
+                        </div>
+                        <div class="settings-row-half">
+                            <div class="btn-group bootstrap-select" style="width: 100%;">
+                                <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="option-hinting" title="keep existing">
+                                    <span class="filter-option pull-left">Keep existing</span>
+                                    "&nbsp;"
+                                    <span class="bs-caret">
+                                        <span class="caret"></span>
+                                    </span>
+                                </button> 
+                                <div class="dropdown-menu open" role="combobox">
+                                    <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
+                                        <li data-original-index="0" class="selected">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="flase" aria-selected="true">
+                                                <span class="text">Keep existing</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                        <li data-original-index="1">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="flase" aria-selected="false">
+                                                <span
+                                                class="text">Strip hinting</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <select id="option-hinting" name="hinting" class tabindex="-98">
+                                    <option value>Keep existing</option>
+                                    <option value="ttfautohint">TTFAutohint</option>
+                                    <option value="dehint">Strip hinting</option>
+                                </select>
+                            </div>
+                        </div>
+                        ::after
+                    </div>
+                    <div class="setting-row clearfix">
+                        ::before
+                        <f class="setting-row-half">
+                            <div class="setting-row-label">
+                                <label for="option-language" class="setting-name">Demo page language</label>
+                            </div>
+                        </f>
+                        <div class="setting-row-half">
+                            <div class="btn-group bootstrap-select" style="width: 100%;">
+                                <button type="button" class="btn dropdown-toggle btn-default" data-toggle="dropdown" role="button" data-id="option-language" title="English">
+                                    <span class="filter-option pull-left">English</span>
+                                    "&nbsp;"
+                                    <span class="bs-caret">
+                                        <span class="caret"></span>
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu open" role="combobox">
+                                    <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
+                                        <li data-original-index="0">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Without demo page</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                        <li data-original-index="1" class="selected">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="true">
+                                                <span class="text">English</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                        <li data-original-index="2">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="flase">
+                                                <span class="text">Russian</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                        <li data-original-index="3".
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                            <span class="text">Georgian</span>
+                                            <span class="glyphicon glyphicon-ok check-mark"></span>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <select id="option-language" name="language" class tabindex="-98">
+                                    <option value>Without demo page</option>
+                                    <option value="en">English</option>
+                                    <option value="ru">Russian</option>
+                                    <option value="ka">Georgian</option>
+                                </select>
+                            </div>
+                        </div>
+                        ::aftert
+                    </div>
+                    <div class="settings-row clearfix">
+                        <div class="settings-row-half">
+                            <div class="settings-row-label">
+                                <label for="option-subsets" class="setting-name">Subsets</label>
+                            </div>
+                        </div>
+                        <div class="setting-row-half">
+                            <div class="btn-group bootstrap-select show-tick" style="width: 100%;">
+                                <button type="button" class="btn dropdown-toggle bs-placeholder btn-default" data-toggle="dropdown" role="button" data-id="option-subsets" title="All">
+                                    <span class="filter-option pull-left">All</span>
+                                    "&nbsp;"
+                                    <span class="bs-caret">
+                                        <span class="caret"></span>
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu open" role="combobox">
+                                    <ul class="dropdown-menu inner" role="listbox" aria-expanded="false">
+                                        <li data-original-index="0">
+                                            <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        </li>
+                                        <li data-original-index="1"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Bengali</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="2"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Crillic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="3"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Crillic Extended</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="4"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Devanagari</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="5"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Georgian</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="6"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Greek</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="7"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Greek Extended</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="8"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="9"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="10"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="11"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="12"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="13"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="14"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="15"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="16"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="17"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="18"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="19"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="20"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="21"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="22"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        <li data-original-index="23"></li>
+                                        <a tabindex="0" class data-token="null" role="option" aria-disabled="false" aria-selected="false">
+                                                <span class="text">Arbic</span>
+                                                <span class="glyphicon glyphicon-ok check-mark"></span>
+                                            </a>
+                                        
 
-                    <!--ab yaha per ham new div se start karege  -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </form>
              </div>
           </div>
